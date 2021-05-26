@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo List - Ran</title>
+    <script src="ran-index.js"></script>
+    <style>
+        body {
+            padding: 10px;
+            font-family: Calibri, sans-serif;
+        }
+
+        input, button, select {
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 12px;
+            border: 1px solid #999;
+        }
+
+        input {
+            background: #fff;
+        }
+
+        .low {
+            background: #93fba5;
+        }
+
+        .high {
+            background: #fb9393;
+        }
+
+        #list {
+            background: #faf6bd;
+            max-width: 500px;
+        }
+
+        #list li {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <input type="text" id="add-text">
+    <select id="add-priority">
+        <option value="low">Low</option>
+        <option value="high">High</option>
+    </select>
+    <button onclick="add()">Add</button>
+    <br>
+    <input type="text" id="remove-text">
+    <button onclick="remove()">Remove</button>
+    <br>
+    <input type="text" id="search-text">
+    <button onclick="search()">Search by Title</button>
+    <br>
+    <select id="search-priority">
+        <option value="low">Low</option>
+        <option value="high">High</option>
+    </select>
+    <button onclick="searchpriority()">Search by Priority</button>
+    <br>
+    <button onclick="showall()">Show All</button>
+
+    <hr>
+
+    <ul id="list">
+
+    </ul>
+</body>
+</html>
